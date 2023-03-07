@@ -13,6 +13,19 @@ namespace MortgageCalculator.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        public IActionResult MortgagePage() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult MortgagePage(Loan loan)
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
